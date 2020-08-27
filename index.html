@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Test Job</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="main">
+            <header>
+                <nav id="up">
+                    <a href="#1">link-1</a>
+                    <a href="#2">link-2</a>
+                    <a href="#3">link-3</a>
+                    <a href="#4">link-4</a>
+                    <a href="#5">link-5</a>
+                    <a href="#6">link-6</a>
+                </nav>
+            </header>
+            <main>
+                <article>
+                    <section>
+                        <h4 id="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                    <section>
+                        <h4 id="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                    <section>
+                        <h4 id="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                    <section>
+                        <h4 id="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                    <section>
+                        <h4 id="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                    <section>
+                        <h4 id="6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </section>
+                </article>
+                <aside class="side-bar">
+                    <div>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </div>
+                    <div>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </div>
+                    <div>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, quae!</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores voluptatibus fugit amet
+                            dolorum aut explicabo totam quod, assumenda soluta vero, dolores facere nesciunt magnam
+                            quisquam
+                            vel harum sequi aspernatur voluptas repudiandae perspiciatis error cumque? Ratione rem
+                            eligendi</p>
+                    </div>
+                </aside>
+            </main>
+        </div>
+        <footer>
+            <nav>
+
+                <a href="#up">UP</a>
+
+            </nav>
+        </footer>
+        <div class="bottom-padding"></div>
+
+    </div>
+    <script src="static/js/jQuery3.4.1.min.js"></script>
+    <script>
+        $('a[href^="#"').on('click', function () {
+            
+            let href = $(this).attr('href');
+
+            $('html, body').animate({
+                scrollTop: $(href).offset().top
+            });
+            return false;
+        });
+        // hide block SIDE-BAR if window < 700px
+        if ($(window).width() < 700) {
+            $(".side-bar").css("display", "none");
+        }
+
+        // hide&show block SIDE-BAR when window resize
+        function hideShow() {
+            if ($(window).width() < 700) {
+                $(".side-bar").fadeOut(250);
+            } else {
+                $(".side-bar").fadeIn(250);
+            }
+        }
+
+        hideShow();
+
+        //  screen test
+        $(window).resize(function () {
+            hideShow();
+        });
+    </script>
+</body>
+
+</html>

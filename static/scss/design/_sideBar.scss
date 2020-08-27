@@ -1,0 +1,9 @@
+aside {
+    &.side-bar {
+        border-left: 1px solid $borderColor;
+        flex: 0 0 300px;
+        box-shadow: 0 0 15px $shadowColor;
+        z-index: 1;
+    }
+    padding: 15px 10px;
+}

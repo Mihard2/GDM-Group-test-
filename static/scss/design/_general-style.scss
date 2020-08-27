@@ -1,0 +1,41 @@
+
+body,
+html {
+    background-color: $bgMain;
+    font-size: 10px;
+    width: 100%;   
+    overflow: scroll;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    min-width: 500px;
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+h1 {
+    font-size: 3.4em;
+}
+h4 {
+    font-size: 2em;
+    padding: 5px;
+}
+p {
+    font-size: 1.6em;
+    padding: 5px;
+}
+footer,
+header {
+    background-color: #fff;
+}
